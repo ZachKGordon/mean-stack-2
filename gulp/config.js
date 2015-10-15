@@ -1,4 +1,4 @@
-var dest = "./build";
+var dest = "./public";
 var src = './src';
 
 module.exports = {
@@ -13,8 +13,8 @@ module.exports = {
     dest: dest + '/assets/'
   },
   sass: {
-    src: src + "/css/**/*.{sass,scss}",
-    dest: dest + '/css/',
+    src: src + "/style/**/*.{sass,scss}",
+    dest: dest + '/style/',
     settings: {
       indentedSyntax: true, // Enable .sass syntax!
     }

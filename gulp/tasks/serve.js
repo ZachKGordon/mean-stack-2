@@ -3,7 +3,7 @@ var webserver = require('gulp-webserver');
 var webpack = require('webpack-stream');
 
 gulp.task('serve', function() {
-  gulp.src("./public/style")
+  gulp.src("./public/")
   .pipe(webserver({
     livereload:true,
     directoryListing: false,
