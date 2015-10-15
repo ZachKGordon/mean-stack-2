@@ -8,7 +8,6 @@ require('./blog.service.js')
     var posts = [];
     dataService.getData().then(function(dataResponse) {
       var data = dataResponse;
-      console.log(dataResponse);
       for (var i = 1; i < data.length; i++) {
         post = {};
         post.description = data[i].description;
@@ -18,7 +17,6 @@ require('./blog.service.js')
           post.title = data[i].files[file].filename;
         }
         posts.push(post);
-        console.log(post)
       }
     });
     this.info = posts;

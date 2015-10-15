@@ -44,7 +44,6 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// require("./public/style/style.css");
 	__webpack_require__(1);
 	__webpack_require__(6);
 	__webpack_require__(7);
@@ -30010,7 +30009,6 @@
 	    var posts = [];
 	    dataService.getData().then(function(dataResponse) {
 	      var data = dataResponse;
-	      console.log(dataResponse);
 	      for (var i = 1; i < data.length; i++) {
 	        post = {};
 	        post.description = data[i].description;
@@ -30020,7 +30018,6 @@
 	          post.title = data[i].files[file].filename;
 	        }
 	        posts.push(post);
-	        console.log(post)
 	      }
 	    });
 	    this.info = posts;
@@ -30050,7 +30047,6 @@
 	          headers: {'Authorization': 'token '+ part1 + part2}
 	      }).then(function(resp, err) {
 	        return resp.data;
-	        console.log(data);
 	      });
 	    }
 	  });

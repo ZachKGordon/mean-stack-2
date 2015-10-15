@@ -17,7 +17,6 @@ require('./app.ctrl.js');
           headers: {'Authorization': 'token '+ part1 + part2}
       }).then(function(resp, err) {
         return resp.data;
-        console.log(data);
       });
     }
   });
