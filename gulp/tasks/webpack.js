@@ -2,13 +2,12 @@ var gulp = require('gulp');
 var config = require('../config').javascript;
 var webpack = require('webpack-stream');
 
-gulp.task('webpack', function(callback) {
-  return gulp.src(config.entry)
+gulp.task('webpack', function(){
+  gulp.src("entry.js")
   .pipe(webpack({
     output: {
-      filename: config.outputFilename
+      filename: "bundle.js"
     }
   }))
-  .pipe(gulp.dest(config.dest));
+  .pipe(gulp.dest("./public/js"));
 });
-
