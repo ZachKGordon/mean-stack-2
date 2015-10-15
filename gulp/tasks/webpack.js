@@ -9,5 +9,5 @@ gulp.task('webpack', function(){
       filename: "bundle.js"
     }
   }))
-  .pipe(gulp.dest("./public/js/"));
+  .pipe(gulp.dest("./public/js"));
 });
