@@ -12,7 +12,7 @@ require('angular-route');
         templateUrl:'/list.html',
         controller: 'GistController',
     })
-      .when('/detailed', {
+      .when('/detailed/:item_id', {
         templateUrl:'/detailed.html',
         controller:'GistController',
       })

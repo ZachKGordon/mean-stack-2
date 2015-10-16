@@ -13,6 +13,7 @@ require('./blog.service.js')
         post.description = data[i].description;
         post.date = data[i].updated_at;
         post.author = data[i].owner.login;
+        post.id = data[i].id;
         for (file in data[i].files) {
           post.title = data[i].files[file].filename;
         }

@@ -67,7 +67,7 @@
 	        templateUrl:'/list.html',
 	        controller: 'GistController',
 	    })
-	      .when('/detailed', {
+	      .when('/detailed/:item_id', {
 	        templateUrl:'/detailed.html',
 	        controller:'GistController',
 	      })
@@ -30020,6 +30020,7 @@
 	        post.description = data[i].description;
 	        post.date = data[i].updated_at;
 	        post.author = data[i].owner.login;
+	        post.id = data[i].id;
 	        for (file in data[i].files) {
 	          post.title = data[i].files[file].filename;
 	        }
@@ -30056,7 +30057,6 @@
 	      });
 	    }
 	  });
-	// This is a comment
 	})();
 
 
