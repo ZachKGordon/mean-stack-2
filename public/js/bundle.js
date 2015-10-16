@@ -30010,9 +30010,11 @@
 	  var app = angular.module('blog');
 
 
-	  app.controller('GistController', function($scope, dataService) {
+	  app.controller('GistController', function($scope, dataService, $routeParams) {
 	    var post;
 	    var posts = [];
+	    this.idx = $routeParams.item_id;
+	    console.log(this.idx)
 	    dataService.getData().then(function(dataResponse) {
 	      var data = dataResponse;
 	      for (var i = 0; i < data.length; i++) {
