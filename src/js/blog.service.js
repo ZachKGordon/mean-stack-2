@@ -1,5 +1,5 @@
-require('./app.ctrl.js');
-
+require('./app.router.js');
+// This code is Molly's from when we were working together.
 (function() {
   var app = angular.module('blog');
   var post;

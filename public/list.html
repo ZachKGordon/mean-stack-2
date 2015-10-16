@@ -1,0 +1,9 @@
+ <div ng-controller="GistController as gist">
+      <article ng-repeat="item in gist.info">
+        <div>
+          <h1>{{item.title}}<h1>
+          <h4>{{item.description}}</h4>
+          <h6>{{item.author}}</h6>
+        </div>
+      </article>
+    </div>
