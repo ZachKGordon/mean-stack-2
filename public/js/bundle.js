@@ -60,9 +60,11 @@
 	(function() {
 
 	  var app = angular.module('blog',['ngRoute']);
+
 	  app.config(function($routeProvider){
-	    $routeProvider.when('/blog', {
-	      template:"<h1>hello world</h1>",
+	    $routeProvider
+	      .when('/blog', {
+	      templateUrl:"/list.html",
 	      controller: "GistController",
 	    })
 	    .otherwise({
@@ -30009,7 +30011,7 @@
 	    var posts = [];
 	    dataService.getData().then(function(dataResponse) {
 	      var data = dataResponse;
-	      for (var i = 1; i < data.length; i++) {
+	      for (var i = 0; i < data.length; i++) {
 	        post = {};
 	        post.description = data[i].description;
 	        post.date = data[i].updated_at;
@@ -30029,7 +30031,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(1);
-
+	// This code is Molly's from when we were working together.
 	(function() {
 	  var app = angular.module('blog');
 	  var post;

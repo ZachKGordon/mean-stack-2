@@ -1,4 +1,4 @@
-require('./app.ctrl.js')
+require('./app.router.js')
 require('./blog.service.js')
   var app = angular.module('blog');
 
@@ -8,7 +8,7 @@ require('./blog.service.js')
     var posts = [];
     dataService.getData().then(function(dataResponse) {
       var data = dataResponse;
-      for (var i = 1; i < data.length; i++) {
+      for (var i = 0; i < data.length; i++) {
         post = {};
         post.description = data[i].description;
         post.date = data[i].updated_at;
