@@ -64,10 +64,14 @@
 	  app.config(function($routeProvider){
 	    $routeProvider
 	      .when('/blog', {
-	      templateUrl:"/list.html",
-	      controller: "GistController",
+	        templateUrl:'/list.html',
+	        controller: 'GistController',
 	    })
-	    .otherwise({
+	      .when('/detailed', {
+	        templateUrl:'/detailed.html',
+	        controller:'GistController',
+	      })
+	      .otherwise({
 	      redirectTo: "/blog",
 	    })
 	  })
