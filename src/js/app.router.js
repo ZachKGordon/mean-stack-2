@@ -9,10 +9,14 @@ require('angular-route');
   app.config(function($routeProvider){
     $routeProvider
       .when('/blog', {
-      templateUrl:"/list.html",
-      controller: "GistController",
+        templateUrl:'/list.html',
+        controller: 'GistController',
     })
-    .otherwise({
+      .when('/detailed/:item_id', {
+        templateUrl:'/detailed.html',
+        controller:'GistController',
+      })
+      .otherwise({
       redirectTo: "/blog",
     })
   })

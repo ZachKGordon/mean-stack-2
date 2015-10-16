@@ -20,5 +20,4 @@ require('./app.router.js');
       });
     }
   });
-// This is a comment
 })();

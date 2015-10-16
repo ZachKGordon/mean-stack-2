@@ -1,11 +1,10 @@
  <div ng-controller="GistController as gist">
-      <article ng-repeat="item in gist.info">
+      <article>
         <div>
           <h1>{{item.title}}<h1>
           <h4>{{item.description}}</h4>
           <h6>{{item.author}}</h6>
           <h6>{{item.id}}<h6>
         </div>
-        <a href="#/detailed/{{item.id}}" class="btn btn__text">Read More</a>
       </article>
     </div>
